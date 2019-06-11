@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div style="margin-right: 300px; margin-left:300px;">
+        <h1>Edit post</h1>
+        <form action="" method="post">{% csrf_token %}
+        {{ form | crispy }}
+        <button type="submit" class="btn btn-primary">Update Post</button>
+        </form>
+    </div>
+{% endblock content %}

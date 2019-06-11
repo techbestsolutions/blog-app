@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for post in object_list %}
+        <ul class ="list-group">
+            <li class="list-group-item">
+                <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+                <p>{{ post.body }}</p>
+                <p>Author - {{ user.first_name }}</p>
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock content %}
